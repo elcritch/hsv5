@@ -62,6 +62,28 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 <tr><td>Station Announcements - Swiss         <td>                 <td>Infinity
 ```
 
+This includes a few benefits over CSV or other text based alternatives:
+- editable by hand )with a few basic rules)
+- builds on existing html knowledge
+- relatively minimal extra overhad wrt CSV:
+  - bulk of overhead would be `<tr>` and `<td>` in a large file
+  - e.g. `"a","b","c"` (8 chars) vs `<tr><td>a<td>b<td>c` (12 chars + 4 char header) (roughly 33% more overhead per column) 
+- it's parseable:
+  - should be readily gzippable
+  - relatively easy to parse, or utilizing html parsers
+  - should be amenable to SIMD parsers
+  - relatively easy to parse without a library:
+    - lines: `lines = file.split("tbody")[1].streamSplitBy("<tr>")` 
+    - columns: `line.split("<td>")` 
+- existing specification for how to escape separator symbols
+  - e.g. `<` becomes `&lt;`
+  - can encode other entities like `&inf;` or various symbols
+- good format for including in markdown tables
+- includes ability to be _self-describing_
+- html5 provides ability to include basic or complex user interfaces built-in
+  - files can reference JavaScript libraries for extended built-in functionality
+
+
 If `.hsv5` were to be viable as a modern CSV replacement it would need to define a specification on a core set of `data-*` attributes and basic required elements. Ideally this would include a JavaScript library that would enable any user to open the data-table in any modern browser and have it auto-verify itself. 
 
 Possible future directions:
