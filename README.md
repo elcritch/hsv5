@@ -13,10 +13,9 @@ This repo explores the concept of an `HTML5` based alternative to CSV, TSV, JSON
 There's a few elements of modern HTML which makes it suitable for a simple text based data-table format. 
 It's currently contains a few examples, with the goal of testing how these ideas work out. 
 
-Shot example: 
+Here's a short _min_ example: 
 
 ```html
-<title>Hello</title>
 <link rel="stylesheet" href="prettytable.css" >
 <table>
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
@@ -29,6 +28,33 @@ Shot example:
 <tr><td>Engineer's cab lighting               <td>                 <td>✔
 <tr><td>Station Announcements - Swiss         <td>                 <td>✔
 ```
+
+A fuller example include more _metadata_, which addresses a core downside of CSV:
+
+```html
+<!doctype html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Hello</title>
+  <link rel="stylesheet" href="prettytable.css" >
+</head>
+
+<table>
+<caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
+<colgroup> <col class="col1"> <col> <col> 
+
+<thead>
+<tr> <th>Function                              <th>Control Unit     <th>Central Station
+
+<tbody>
+<tr><td>Headlights                            <td>✔                <td>✔
+<tr><td>Interior Lights                       <td>✔                <td>✔
+<tr><td>Electric locomotive operating sounds  <td>✔                <td>✔
+<tr><td>Engineer's cab lighting               <td>                 <td>✔
+<tr><td>Station Announcements - Swiss         <td>                 <td>✔
+</table>
+```
+
 
 ## Background on HTML5 and WHATWG Specification
 
