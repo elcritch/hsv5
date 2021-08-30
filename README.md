@@ -63,7 +63,7 @@ Possible future directions:
 
 - Define a common set of `data-*` attributes for column data types
 - Specifically defining set types for floats, integers, strings, booleans, etc
-- Specifically defining semantics for data types
+- Defining common semantics for data types, or perhaps intent of columns
 - Verify minimal standard tags required to satisfy WHATWG / HTML5 specifications
 
 ## Background on HTML5 and WHATWG Specification
