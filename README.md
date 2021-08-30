@@ -13,7 +13,7 @@ This repo explores the concept of an `HTML5` based alternative to CSV, TSV, JSON
 There's a few elements of modern HTML which makes it suitable for a simple text based data-table format. 
 It's currently contains a few examples, with the goal of testing how these ideas work out. 
 
-Here's a short _min_ example: 
+Here's a short _minimal_ example that is compliant `HTML5` according to the WHATWG standard making use of the ability to omit a lot of redundant end tags: 
 
 ```html
 <link rel="stylesheet" href="prettytable.css" >
@@ -28,6 +28,8 @@ Here's a short _min_ example:
 <tr><td>Engineer's cab lighting               <td>                 <td>✔
 <tr><td>Station Announcements - Swiss         <td>                 <td>✔
 ```
+
+Why this works is detailed more below. This example _might_ also contain some issues, but does properly load in Firefox and Chrome. 
 
 ## Detailed Examples 
 
