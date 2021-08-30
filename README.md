@@ -29,6 +29,8 @@ Here's a short _min_ example:
 <tr><td>Station Announcements - Swiss         <td>                 <td>✔
 ```
 
+## Detailed Examples 
+
 A fuller example include more _metadata_, which addresses a core downside of CSV:
 
 ```html
@@ -55,6 +57,13 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 </table>
 ```
 
+If `.hsv5` were to be viable as a modern CSV replacement it would need to define a specification on a core set of `data-*` attributes and basic required elements. Ideally this would include a JavaScript library that would enable any user to open the data-table in any modern browser and have it auto-verify itself. 
+
+Possible future directions:
+
+- Define a common set of `data-*` attributes for column data types
+- Specifically defining semantics for floats, integers, strings, booleans, etc
+- Verify minimal standard tags required to satisfy WHATWG / HTML5 specifications
 
 ## Background on HTML5 and WHATWG Specification
 
