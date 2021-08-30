@@ -39,19 +39,19 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
   <link rel="stylesheet" href="prettytable.css" >
 </head>
 
-<table>
+<table >
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
-<colgroup> <col class="col1"> <col> <col> 
+<colgroup> <col data-type="string"> <col data-type="boolean" > <col data-type="float" data-parse="js" > 
 
 <thead>
-<tr> <th>Function                              <th>Control Unit     <th>Central Station
+<tr> <th>Function                              <th>Control Unit     <th>Power Ratio
 
 <tbody>
-<tr><td>Headlights                            <td>✔                <td>✔
-<tr><td>Interior Lights                       <td>✔                <td>✔
-<tr><td>Electric locomotive operating sounds  <td>✔                <td>✔
-<tr><td>Engineer's cab lighting               <td>                 <td>✔
-<tr><td>Station Announcements - Swiss         <td>                 <td>✔
+<tr><td>Headlights                            <td>✔                <td>1.92
+<tr><td>Interior Lights                       <td>✔                <td>0.34
+<tr><td>Electric locomotive operating sounds  <td>✔                <td>2.33
+<tr><td>Engineer's cab lighting               <td>                 <td>NaN
+<tr><td>Station Announcements - Swiss         <td>                 <td>Infinity
 </table>
 ```
 
