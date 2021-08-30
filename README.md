@@ -41,7 +41,7 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 
 <table >
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
-<colgroup> <col data-type="string"> <col data-type="boolean" > <col data-type="float" data-parse="js" > 
+<colgroup> <col data-type="string"> <col data-semantics="checkbox" data-type="boolean" > <col data-type="float" data-parser="parseFloat" > 
 
 <thead>
 <tr> <th>Function                              <th>Control Unit     <th>Power Ratio
