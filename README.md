@@ -43,7 +43,10 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 
 <table >
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
-<colgroup> <col data-type="string"> <col data-semantics="checkbox" data-type="boolean" > <col data-type="float" data-parser="parseFloat" > 
+<colgroup>
+  <col data-type="string">
+  <col data-semantics="checkbox" data-type="boolean" >
+  <col data-type="float" data-parser="parseFloat" > 
 
 <thead>
 <tr> <th>Function                              <th>Control Unit     <th>Power Ratio
@@ -54,7 +57,6 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 <tr><td>Electric locomotive operating sounds  <td>✔                <td>2.33
 <tr><td>Engineer's cab lighting               <td>                 <td>NaN
 <tr><td>Station Announcements - Swiss         <td>                 <td>Infinity
-</table>
 ```
 
 If `.hsv5` were to be viable as a modern CSV replacement it would need to define a specification on a core set of `data-*` attributes and basic required elements. Ideally this would include a JavaScript library that would enable any user to open the data-table in any modern browser and have it auto-verify itself. 
