@@ -41,7 +41,7 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
   <link rel="stylesheet" href="prettytable.css" >
 </head>
 
-<table >
+<table>
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
 
 <thead>
