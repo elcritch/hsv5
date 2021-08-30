@@ -62,7 +62,8 @@ If `.hsv5` were to be viable as a modern CSV replacement it would need to define
 Possible future directions:
 
 - Define a common set of `data-*` attributes for column data types
-- Specifically defining semantics for floats, integers, strings, booleans, etc
+- Specifically defining set types for floats, integers, strings, booleans, etc
+- Specifically defining semantics for data types
 - Verify minimal standard tags required to satisfy WHATWG / HTML5 specifications
 
 ## Background on HTML5 and WHATWG Specification
