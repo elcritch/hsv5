@@ -3,30 +3,27 @@
 There was a recent [discussion](https://news.ycombinator.com/item?id=28221654) on Hacker News on an article [Time to retire the CSV? (bitsondisk.com)](https://www.bitsondisk.com/writing/2021/retire-the-csv/).
 The article makes many excellent points. CSV and it's related family have fundamental problems largely related to lack of formal specification and missing metadata.
 
-However, text formats are often much nicer to use than binary files.
+However, text formats are often much more convenient to use than binary files.
 It's easy to open a file in almost any language, do a `line.split('\t')` and be able to import data.
 A CSV alternative based on ASCII control codes would resolve many of the problems of either escaping or wrapping the delimiter character. 
 Unfortunately it doesn't resolve the lack of metadata which is another major drawback of any character based separator files.
 What can we do? 
 
-This repo explores the concept of an `HTML5` based alternative to CSV, TSV, JSONL.
-There's a few elements of modern HTML which makes it suitable for a simple text based data-table format. 
-It's currently contains a few examples, with the goal of testing how these ideas work out. 
+This repo explores the concept of an `HTML5` based alternative to `CSV`, `TSV`, `JSONL`.
+There's a few aspects of modern `HTML5` which make a good candidate for a text based data-table format that's well defined yet straightforward. 
 
-Here's a short _minimal_ example that is compliant `HTML5` according to the WHATWG standard making use of the ability to omit a lot of redundant end tags: 
+TLDR; Here's a short _minimal_ example that is compliant `HTML5` according to the WHATWG standard. It builds on that standard to omit a lot of tags: 
 
 ```html
 <!doctype html>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8"/>
+<meta name="application-name" content="hsv5">
 <table>
 <thead>
-<tr><th>Function                              <th>Control Unit     <th>Central Station
+<tr><th>Timestamp          <th>Temperature    <th>Humidity         <th>Pressure
 <tbody>
-<tr><td>Headlights                            <td>✔                <td>✔
-<tr><td>Interior Lights                       <td>✔                <td>✔
-<tr><td>Electric locomotive operating sounds  <td>✔                <td>✔
-<tr><td>Engineer's cab lighting               <td>                 <td>✔
-<tr><td>Station Announcements - Swiss         <td>                 <td>✔
+<tr>2020-05-26T00:00:00.000Z<td>8.32<td>75.5<td>102073
+<tr>2020-05-26T00:01:00.000Z<td>8.31<td>75.5<td>102074
 ```
 
 Why this works is detailed more below. This example _might_ also contain some issues, but does properly load in Firefox and Chrome. 
@@ -37,11 +34,9 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 
 ```html
 <!doctype html>
-<head>
-  <meta charset="utf-8"/>
-  <title>Hello</title>
-  <link rel="stylesheet" href="prettytable.css" >
-</head>
+<meta charset="utf-8"/>
+<meta name="application-name" content="hsv5">
+<link rel="stylesheet" href="prettytable.css" >
 
 <table>
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
