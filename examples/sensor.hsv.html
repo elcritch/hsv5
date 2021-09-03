@@ -1,20 +1,18 @@
 <!doctype html>
+<head>
 <meta charset="utf-8"/>
 <meta name="application-name" content="hsv5">
 <link rel="stylesheet" href="prettytable.css" >
+<title>sensor data</title>
+</head>
 
-<table >
+<table itemscope itemtype="http://schema.org/Product">
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
 
 <thead>
-<tr><th>Timestamp          <th>Temperature    <th>Humidity         <th>Pressure
-
-<colgroup>
-<col data-type="datetime" format="iso8601">
-<col data-type="float32" > 
-<col data-type="float32" > 
-<col data-type="int64" > 
+<tr><th itemprop="dt-iso8601">Timestamp<th itemprop="f32">Temperature<th itemprop="f32">Humidity<th itemprop="f32">Pressure
 
 <tbody>
 <tr><td>2020-05-26T00:00:00.000Z<td>8.32<td>75.5<td>102073
 <tr><td>2020-05-26T00:01:00.000Z<td>8.31<td>75.5<td>102074
+</table>

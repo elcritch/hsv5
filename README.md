@@ -20,7 +20,7 @@ TLDR; Here's a short _minimal_ example that is compliant `HTML5` according to th
 <meta name="application-name" content="hsv5">
 <table>
 <thead>
-<tr><th>Timestamp          <th>Temperature    <th>Humidity         <th>Pressure
+<tr><th>Timestamp<th>Temperature<th>Humidity<th>Pressure
 <tbody>
 <tr>2020-05-26T00:00:00.000Z<td>8.32<td>75.5<td>102073
 <tr>2020-05-26T00:01:00.000Z<td>8.31<td>75.5<td>102074
