@@ -16,14 +16,20 @@ TLDR; Here's a short _minimal_ example that is compliant `HTML5` according to th
 
 ```html
 <!doctype html>
-<meta charset="utf-8"/>
-<meta name="application-name" content="hsv5">
+<html vocab="https://hsv5.org/" typeof="hsv5" lang="en">
+<title>sensor data @ 2020-05-26T00:00:00.000Z</title>
 <table>
 <thead>
-<tr><th>Timestamp<th>Temperature<th>Humidity<th>Pressure
+<tr>
+  <th property="time/iso">Timestamp
+  <th property="temperature/celsius" datatype="f32">Temperature
+  <th property="humidity/percent" datatype="f32">Humidity
+  <th property="pressure/kPa" datatype="f32">Pressure
 <tbody>
 <tr>2020-05-26T00:00:00.000Z<td>8.32<td>75.5<td>102073
-<tr>2020-05-26T00:01:00.000Z<td>8.31<td>75.5<td>102074
+<tr>2020-05-26T00:01:00.000Z<td>8.31<td>NaN<td>102074
+<tr>2020-05-26T00:02:00.000Z<td>8.31<td>75.4<td>102074
+<tr>2020-05-26T00:03:00.000Z<td>8.30<td>75.4<td>102074
 ```
 
 Why this works is detailed more below. This example _might_ also contain some issues, but does properly load in Firefox and Chrome. 
@@ -42,19 +48,17 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 <caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
 
 <thead>
-<tr> <th>Function                              <th>Control Unit     <th>Power Ratio
-
-<colgroup>
-  <col data-type="string">
-  <col data-semantics="checkbox" data-type="boolean" >
-  <col data-type="float" data-parser="parseFloat" > 
+<tr>
+  <th property="time/iso">Timestamp
+  <th property="temperature/celsius" datatype="float">Temperature
+  <th property="humidity/percent" datatype="float">Humidity
+  <th property="pressure/kPa" datatype="float">Pressure
 
 <tbody>
-<tr><td>Headlights                            <td>✔                <td>1.92
-<tr><td>Interior Lights                       <td>✔                <td>0.34
-<tr><td>Electric locomotive operating sounds  <td>✔                <td>2.33
-<tr><td>Engineer's cab lighting               <td>                 <td>NaN
-<tr><td>Station Announcements - Swiss         <td>                 <td>Infinity
+<tr>2020-05-26T00:00:00.000Z<td>8.32            <td>75.5        <td>102073
+<tr>2020-05-26T00:01:00.000Z<td>8.31            <td>NaN         <td>102074
+<tr>2020-05-26T00:02:00.000Z<td>8.31            <td>75.4        <td>102074
+<tr>2020-05-26T00:03:00.000Z<td>8.30            <td>75.4        <td>102074
 ```
 
 This includes a few benefits over CSV or other text based alternatives:
