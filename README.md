@@ -17,6 +17,7 @@ Here's a short _minimal_ example that is compliant `HTML5` according to the WHAT
 
 ```html
 <!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <table>
 <thead>
 <tr><th>Function                              <th>Control Unit     <th>Central Station
