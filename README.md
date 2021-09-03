@@ -16,9 +16,8 @@ It's currently contains a few examples, with the goal of testing how these ideas
 Here's a short _minimal_ example that is compliant `HTML5` according to the WHATWG standard making use of the ability to omit a lot of redundant end tags: 
 
 ```html
-<link rel="stylesheet" href="prettytable.css" >
+<!doctype html>
 <table>
-<caption>37547 TEE Electric Powered Rail Car Train Functions (Abbreviated)
 <thead>
 <tr><th>Function                              <th>Control Unit     <th>Central Station
 <tbody>
