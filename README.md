@@ -12,6 +12,8 @@ What can we do?
 This repo explores the concept of an `HTML5` based alternative to `CSV`, `TSV`, `JSONL`.
 There's a few aspects of modern `HTML5` which make a good candidate for a text based data-table format that's well defined yet straightforward. 
 
+It also uses [RDFa](https://www.w3.org/TR/html-rdfa/) for richer types. 
+
 TLDR; Here's a short _minimal_ example that is compliant `HTML5` according to the WHATWG standard. It builds on that standard to omit a lot of tags: 
 
 ```html
