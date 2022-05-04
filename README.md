@@ -30,6 +30,7 @@ TLDR; Here's a short _minimal_ example that is compliant `HTML5` according to th
 <tr>2020-05-26T00:01:00.000Z<td>8.31<td>NaN<td>102074
 <tr>2020-05-26T00:02:00.000Z<td>8.31<td>75.4<td>102074
 <tr>2020-05-26T00:03:00.000Z<td>8.30<td>75.4<td>102074
+<table>
 ```
 
 Why this works is detailed more below. This example _might_ also contain some issues, but does properly load in Firefox and Chrome. 
@@ -59,6 +60,7 @@ A fuller example include more _metadata_, which addresses a core downside of CSV
 <tr>2020-05-26T00:01:00.000Z<td>8.31            <td>NaN         <td>102074
 <tr>2020-05-26T00:02:00.000Z<td>8.31            <td>75.4        <td>102074
 <tr>2020-05-26T00:03:00.000Z<td>8.30            <td>75.4        <td>102074
+<table>
 ```
 
 This includes a few benefits over CSV or other text based alternatives:
